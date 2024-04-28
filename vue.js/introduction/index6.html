@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Vue</title>
+    <link rel="stylesheet" type="text/css" href="styles6.css" >
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap.css" >
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <label for="birthday">お誕生日は？</label>
+            <input type="date" id="birthday" v-model="birthday">
+
+            <p v-if="age >= 0">{{ age }} 歳ですね！</p>
+            <p v-else>お誕生日を入力してください。</p>
+
+            <p v-if="isComputedCalled" class="message">
+                Computedが呼び出されました。
+            </p>
+
+            <p>
+                <input type="number" v-model.number="left">
+                +
+                <input type="number" v-model.number="right">
+                =
+                {{ total }}
+            </p>
+
+            <p v-if="isComputedCalled2" class="message">
+                Computedが呼び出されました。
+            </p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.js"></script>
+    <script src="app6.js"></script>
+</body>
+</html>

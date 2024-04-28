@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Vue</title>
+  <link rel="stylesheet" type="text/css" href="styles5.css" >
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap.css" >
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <button v-on:click="something = true">Push</button>
+            <button @click="someFunc">Push</button>
+            <button @click="hello">Push</button>
+            <button @click="hello2">Push</button>
+
+            <h1>Welcome to Vue</h1>
+            <ul class="tab">
+                <li class="tab-item">
+                    <button @click="toggle(1)">tab 1</button>
+                </li>
+                <li class="tab-item">
+                    <button @click="currentTab = 2">tab 2</button>
+                </li>
+                <li class="tab-item">
+                    <button @click="toggle(3)">tab 3</button>
+                </li>
+            </ul>
+            <section class="tab-content" v-show="currentTab === 1">
+                <h2>Tab 1</h2>
+                <p>Lorem ipsum dolor sit amet, te sed dolor aliquam scripserit, ut blandit recteque ius, eripuit invenire ne duo.</p>
+            </section>
+            <section class="tab-content" v-show="currentTab === 2">
+                <h2>Tab 2</h2>
+                <p>At cum scripta admodum, ius habeo postea deterruisset ne, admodum oporteat eu vis. </p>
+            </section>
+            <section class="tab-content" v-show="currentTab === 3">
+                <h2>Tab 3</h2>
+                <p>Iuvaret efficiantur at est, eos alienum argumentum ei, nullam imperdiet ad sed.</p>
+            </section>
+
+            <h1>Vue Form Sample</h1>
+            <div class="form-content" v-if="submitted">
+                <h2>フォームが送信されました</h2>
+                <dl>
+                    <dt>満足度:</dt>
+                    <dd>{{ '⭐️'.repeat(rating) }}</dd>
+                    <dt>コメント:</dt>
+                    <dd><pre>{{ comment }}</pre></dd>
+                </dl>
+                <button type="button" @click.prevent="clearForm">
+                    クリア
+                </button>
+            </div>
+            <form @submit.prevent="onSubmit">
+                <div class="form-group">
+                    <label for="rating">満足度</label>
+                    <select id="rating" v-model="rating">
+                        <option value="0">No star</option>
+                        <option value="1">⭐️</option>
+                        <option value="2">⭐️⭐️</option>
+                        <option value="3">⭐️⭐️⭐️</option>
+                        <option value="4">⭐️⭐️⭐️⭐️</option>
+                        <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="comment">コメント</label>
+                    <textarea id="comment" v-model="comment"></textarea>
+                    <p class="error-msg" v-if="error">{{ error }}</p>
+                </div>
+                <button type="submit">送信</button>
+            </form>
+
+            <h1>Vue.js Image Preview</h1>
+            <input type="file" @change="onFileChange" accept="image/*">
+            <output>
+                <img :src="previewUrl" v-if="previewUrl">
+                <p v-else>No image...</p>
+            </output>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="app5.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Vue</title>
+    <link rel="stylesheet" type="text/css" href="styles7.css" >
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap.css" >
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <h1>Vue.js Form Validation</h1>
+            <div class="form-group">
+            <label for="email">
+                メールアドレス
+                <small>※必須、半角英数のみ</small>
+            </label>
+            <input type="text" id="email" v-model="email">
+            <p class="error" v-if="error.email">{{ error.email }}</p>
+            </div>
+            <div class="form-group">
+            <label for="username">
+                ユーザー名
+                <small>※必須、半角英数のみ</small>
+            </label>
+            <input type="text" id="username" v-model="username">
+            <p class="error" v-if="error.username">{{ error.username }}</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="app7.js"></script>
+</body>
+</html>

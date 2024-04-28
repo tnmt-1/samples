@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Vue</title>
+  <link rel="stylesheet" type="text/css" href="styles2.css" >
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" >
+</head>
+<body>
+  <div id="app">
+      <div class="container">
+        <h1>Welcome to Vue</h1>
+        <p class="notification" v-if="messages.count > 0">
+          You have {{ messages.count }} messages.
+        </p>
+        <p v-else>No messages.</p>
+
+        <p>
+          I am :
+          <i class="fa fa-mars icon"        v-if="user.gender === 'male'"></i>
+          <i class="fa fa-venus icon"       v-else-if="user.gender === 'female'"></i>
+          <i class="fa fa-transgender icon" v-else></i>
+        </p>
+
+        <ul class="tab">
+          <li class="tab-item"><button>tab 1</button></li>
+          <li class="tab-item"><button>tab 2</button></li>
+          <li class="tab-item"><button>tab 3</button></li>
+        </ul>
+        <section class="tab-content" v-show="currentTab === 1">
+          <h2>Tab 1</h2>
+          <p>Lorem ipsum dolor sit amet, te sed dolor aliquam scripserit, ut blandit recteque ius, eripuit invenire ne duo.</p>
+        </section>
+        <section class="tab-content" v-show="currentTab === 2">
+          <h2>Tab 2</h2>
+          <p>At cum scripta admodum, ius habeo postea deterruisset ne, admodum oporteat eu vis. </p>
+        </section>
+        <section class="tab-content" v-show="currentTab === 3">
+          <h2>Tab 3</h2>
+          <p>Iuvaret efficiantur at est, eos alienum argumentum ei, nullam imperdiet ad sed.</p>
+        </section>
+
+        <br/>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Creator</th>
+              <th>Github Stars</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="framework in frameworks">
+              <td>{{ framework.name }}</td>
+              <td>{{ framework.creator }}</td>
+              <td>{{ framework.stars }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <img :src="`https://media.giphy.com/media/${gifId}/giphy.gif`" />
+        </p>
+        <p>
+          <small>
+            <a href="https://giphy.com">via GIPHY</a>
+          </small>
+        </p>
+      </div>
+  </div>
+
+  <script src="https://unpkg.com/vue"></script>
+  <script src="app2.js"></script>
+</body>
+</html>
+

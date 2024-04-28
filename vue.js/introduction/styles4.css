@@ -1,0 +1,19 @@
+.container-fluid {
+    padding: 1rem 2%;
+}
+
+.table {
+    table-layout: fixed;
+}
+
+.table tr td {
+    vertical-align: middle;
+}
+
+.table tr td {
+    word-wrap: break-word;
+}
+
+input[type="file"] {
+    overflow: hidden;
+}
