@@ -1,0 +1,38 @@
+baseURL = "https://tnmt-memo.pages.dev"
+enableEmoji = true
+languageCode = "ja"
+paginate = 10
+theme = "hugo-theme-monochrome"
+title = "tnmt memo"
+
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[params]
+author = "tnmt"
+color_scheme = "dark"
+footer = "Copyright © 2023 by tnmt"
+
+enable_math = false
+enable_toc = true
+enable_twitter_cards = true
+
+# SEO
+enable_open_graph = true
+enable_site_search = true
+
+# Collapsible Menu
+enable_collapsible_changelogs = true
+enable_collapsible_toc = false
+
+[menu]
+[[menu.navbar]]
+identifier = "me"
+name = "Me"
+url = "/me/"
+weight = 100
