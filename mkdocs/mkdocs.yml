@@ -1,0 +1,104 @@
+site_name: My Docs
+theme:
+  name: material
+  language: ja
+  features:
+    - announce.dismiss
+    # - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - navigation.path
+    - search.highlight
+    # - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to system preference
+# nav:
+#   - Home:
+#     - '/'
+#   - Test1:
+#     - test1/index.md
+#   - Test2:
+#     - 'test2/'
+not_in_nav: |
+  /tags.md
+plugins:
+  - search:
+      # 日本語検索対応
+      separator: '[\s\-\.]+'
+  - tags:
+      tags_file: tags.md 
+markdown_extensions:
+    - attr_list
+    # コードハイライト
+    - pymdownx.highlight:
+        linenums_style: pymdownx-inline
+        anchor_linenums: true
+        use_pygments: true
+        linenums: true
+    # インラインハイライト
+    - pymdownx.inlinehilite
+    # PlantUMLの表示設定
+    # - plantuml_markdown:
+    #     server: http://www.plantuml.com/plantuml    
+    # アラート修飾
+    - admonition
+    # スーパーフェンス機能
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+    # コンテンツの折りたたみ
+    - pymdownx.details
+    # 定義リスト
+    - def_list
+    # 注釈
+    - footnotes
+    # グリッド表示
+    - tables
+    # 絵文字
+    - pymdownx.emoji
+    # タブ化
+    - pymdownx.tabbed:
+        alternate_style: true
+extra_css:
+  - stylesheets/extra.css
+copyright: Copyright &copy; tnmt
