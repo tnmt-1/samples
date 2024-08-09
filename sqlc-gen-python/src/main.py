@@ -13,6 +13,7 @@ def transaction(func):
     def wrapper():
         with engine.connect() as connection:
             try:
+                connection.begin()
                 func(connection)
                 connection.commit()
             except Exception as e:
