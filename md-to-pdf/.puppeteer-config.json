@@ -1,0 +1,20 @@
+{
+    "marked_options": {
+        "breaks": true
+    },
+    "pdf_options": {
+      "format": "A4",
+      "margin": "15mm 10mm 10mm 10mm",
+      "displayHeaderFooter": true,
+      "headerTemplate": " ",
+      "footerTemplate": "<div style=\"position: relative; margin: 0.5cm 1cm; font-size: 10px; width: 100%;\"><div style=\"position: absolute; width: 100%; top: 0.2cm;\">Rococo Co.,Ltd. All Rights Reserved.</div><div style=\"position: absolute; right: 0; top: 0.2cm;\"><span class='pageNumber'></span></div></div>"
+    },
+    "launch_options": {
+        "args": ["--no-sandbox"]
+    },
+    "stylesheet": [
+      "./styles/github-markdown.min.css",
+      "./styles/style.css"
+    ],
+    "body_class": "markdown-body"
+}

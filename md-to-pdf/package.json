@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "md-to-pdf": "^5.2.4"
+  },
+  "scripts": {
+    "pdf": "md-to-pdf --config-file .puppeteer-config.json"
+  }
+}

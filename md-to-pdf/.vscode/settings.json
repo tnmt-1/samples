@@ -1,0 +1,29 @@
+{
+  // General
+  "files.autoSave": "off",
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+
+  // Markdown All in One
+  "markdown.extension.list.indentationSize": "inherit",
+  "markdown.extension.toc.updateOnSave": false,
+
+  // Markdown PDF
+  "markdown-pdf.includeDefaultStyles": false,
+  "markdown-pdf.styles": [
+    "styles/github-markdown.min.css",
+    "styles/style.css"
+  ],
+  "markdown-pdf.breaks": true,
+  "markdown-pdf.outputDirectoryRelativePathFile": true,
+  "markdown-pdf.outputDirectory": "outputs",
+  "markdown-pdf.stylesRelativePathFile": true,
+  "markdown-pdf.displayHeaderFooter": true,
+  "markdown-pdf.headerTemplate": " ",
+  "markdown-pdf.footerTemplate": "<div style=\"position: relative; margin: 0.5cm 1cm; font-size: 8px; width: 100%;\"><div style=\"position: absolute; width: 100%; top: 0.2cm;\">Rococo Co.,Ltd. All Rights Reserved.</div><div style=\"position: absolute; right: 0; top: 0.2cm;\"><span class='pageNumber'></span></div></div>",
+
+  // Markdown Preview Github Styling
+  "markdown-preview-github-styles.colorTheme": "light"
+}

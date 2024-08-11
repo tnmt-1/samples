@@ -1,0 +1,22 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+  "name": "md-to-pdf",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  // "forwardPorts": [8000],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "yzhang.markdown-all-in-one",
+        "DavidAnson.vscode-markdownlint",
+        "EditorConfig.EditorConfig",
+        "TakumiI.markdown-toc-num",
+        "tomoki1207.pdf",
+        "bierner.markdown-preview-github-styles"
+      ]
+    }
+  }
+  // "postCreateCommand": ""
+}
